@@ -1,0 +1,4 @@
+php artisan install:api
+composer require laravel/sanctum
+php artisan migrate
+php artisan make:Controller Api/AuthController
