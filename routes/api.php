@@ -12,11 +12,17 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/profile', [AuthController::class, 'profile']);
 
     //for testing only. to test it out go to this http://127.0.0.1:8000/api/test
+    // if its not working thats becuase you need a token. so get this whole code out of this parameter and test it again.
+    // to get the token you must register and then login the credintials you register(email,password)
+    //the parameter for registration is name, email, password, and for login is email, password
+    // watch the whole video that sir niel sent, to know where to get and put the token on postman
     Route::get('/test', function () {
     return response()->json([
         'message' => 'test'
     ]);
 });
+
+    
 });
 
 
